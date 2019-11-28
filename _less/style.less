@@ -43,6 +43,8 @@ header {
   font-size: 46px;
   line-height: 46px;
   color: #333333;
+  margin: 36px 0 65px;
+  padding-left: 30px;
 }
 nav {
   display: flex;
@@ -101,13 +103,16 @@ nav {
 }
 
 .socials {
-  background-color: @bgColor;
-  width: 250px;
-  height: 50px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
+  &__links {
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    background-color: @bgColor;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
   &__circle {
     width: 32px;
     height: 32px;
@@ -125,9 +130,24 @@ nav {
   position: absolute;
   top: 0;
   right: 30px;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   a {
     color: #ffffff;
+  }
+}
+
+.login {
+  display: flex;
+  justify-content: space-between;
+  &__links {
+    font-size: 12px;
+    line-height: 14px;
+    color: @bgColor;
+    &:not(:last-child) {
+      border-right: 1px solid black;
+    }
   }
 }
