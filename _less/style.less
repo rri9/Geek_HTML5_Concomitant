@@ -3,12 +3,10 @@
 
 html,
 body {
-  // height: 100%;
   margin: 0;
   padding: 0;
 }
 body {
-  // background-color: #1f1f1f;
   width: @widthDesktop;
   margin: 0 auto;
   border-left: 20px solid #1f1f1f;
@@ -308,5 +306,105 @@ main {
     font-size: 12px;
     line-height: 14px;
     color: #737373;
+  }
+}
+
+.footer {
+  background-color: #3b3b3b;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 30px;
+  color: #999999;
+  &__item {
+    width: 210px;
+  }
+  &__h1 {
+    font-size: 13px;
+    line-height: 15px;
+    color: #666666;
+    margin: 0 0 30px;
+  }
+}
+
+.contacts {
+  &__text {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+.links {
+  &__item {
+    font-size: 12px;
+    line-height: 14px;
+    a {
+      color: inherit;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__separator {
+    border-bottom: 1px solid #484848;
+    margin: 10px 0;
+  }
+}
+
+.blog {
+  &__post-title {
+    font-size: 13px;
+    line-height: 15px;
+  }
+  &__post-author {
+    font-size: 11px;
+    line-height: 13px;
+    &_margin {
+      margin: 7px 0 11px;
+    }
+  }
+  &__post-text {
+    font-size: 12px;
+    line-height: 19px;
+  }
+  &__details-link {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    a {
+      font-size: 12px;
+      line-height: 14px;
+      color: @bgColor;
+    }
+  }
+}
+
+.newsletters {
+  &__form {
+    & * {
+      margin-bottom: 10px;
+      height: 31px;
+      background-color: #1f1f1f;
+      border: none;
+      border-radius: 5px;
+    }
+  }
+  &__input {
+    &::placeholder {
+      padding: 10px;
+    }
+  }
+  &__btn {
+    font-size: 13px;
+    line-height: 20px;
+    color: @bgColor;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.05);
+    }
+    &:focus {
+      outline: none;
+    }
+    &:active {
+      transform: scale(0.95);
+    }
   }
 }
